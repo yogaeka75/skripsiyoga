@@ -50,29 +50,59 @@ class ItemController extends Controller
         $data = $request->all();
         $data['stock'] = 0;
 
-        $file = $request->file('thumbnail')->store('images', 'public');
-        $data['thumbnail'] = 'storage/' . $file;
+        // $file = $request->file('thumbnail')->store('images', 'public');
+        // $data['thumbnail'] = 'storage/' . $file;
+
+        $file = $request->file('thumbnail');
+        $file_name = time() . '_' . $file->extension();
+        $file->move('images', $file_name);
+        $data['thumbnail'] = 'images/' . $file_name;
 
         Item::create($data);
 
         return redirect()->route('item.index')->with('success', 'Successfully added item');
     }
 
-    public function update(Request $request, $id)
-    {
-        $data = $request->all();
-        $item = Item::find($id);
+   public function update(Request $request, $id)
+   {
+       $data = $request->all();
+       $item = Item::find($id);
 
-        //   change using storage
-        if ($request->file('thumbnail')) {
-            $file = $request->file('thumbnail')->store('images', 'public');
-            $data['thumbnail'] = 'storage/' . $file;
-        }
+       // Periksa jika ada file thumbnail yang diunggah
+       if ($request->file('thumbnail')) {
+           // Hapus file lama jika ada
+           if ($item->thumbnail && file_exists(public_path($item->thumbnail))) {
+               unlink(public_path($item->thumbnail));
+           }
 
-        // Update the item with the new data
-        $item->update($data);
+           // Simpan file baru ke direktori yang sama seperti `store`
+           $file = $request->file('thumbnail');
+           $file_name = time() . '_' . $file->getClientOriginalName();
+           $file->move('images', $file_name);
+           $data['thumbnail'] = 'images/' . $file_name;
+       }
 
-        // Redirect back to the item index page with a success message
-        return redirect()->route('item.index')->with('success', 'Successfully updated item');
+       // Update item dengan data baru
+       $item->update($data);
+
+       // Redirect ke halaman index dengan pesan sukses
+       return redirect()->route('item.index')->with('success', 'Successfully updated item');
+   }
+
+    public function destroy($id)
+        {
+    $item = Item::findOrFail($id);
+
+    // Hapus file thumbnail jika ada
+    if ($item->thumbnail && file_exists(public_path($item->thumbnail))) {
+        unlink(public_path($item->thumbnail));
     }
+
+    // Hapus data barang
+    $item->delete();
+
+    return redirect()->route('item.index')->with('success', 'Successfully deleted item');
+}
+
+
 }
