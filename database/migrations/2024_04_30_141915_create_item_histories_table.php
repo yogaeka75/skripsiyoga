@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('item_histories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('item_id')->constrained();
+            $table->foreignId('item_id')->constrained()->onDelete('cascade');
             $table->string('type');
             $table->integer('quantity_before');
             $table->integer('quantity');
