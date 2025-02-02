@@ -57,10 +57,11 @@
 
         /* Mengatur gambar agar sesuai dengan ukuran div dan ter-crop */
         .card-img-top {
-            object-fit: cover;
-            height: 200px;
-            /* Atur sesuai dengan kebutuhan Anda */
-        }
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi sesuai kebutuhan */
+    object-fit: cover;
+    object-position: center;
+}
 
         html {
   scroll-behavior: smooth;
