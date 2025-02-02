@@ -57,11 +57,18 @@
 
         /* Mengatur gambar agar sesuai dengan ukuran div dan ter-crop */
         .card-img-top {
-    width: 100%;
+            width: 100%;
     height: 200px; /* Sesuaikan tinggi sesuai kebutuhan */
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-}
+    background-color: #f8f9fa;
+        }
+
+        .card-img-top-pelayanan{
+            object-fit: cover;
+            height: 200px;
+            /* Atur sesuai dengan kebutuhan Anda */
+        }
 
         html {
   scroll-behavior: smooth;
@@ -190,7 +197,7 @@
             </div>
             <div class="col-md-2 col-sm-4 category-card">
                 <div class="card">
-                    <img src="/foto_produk/6.jpg"
+                    <img src="/foto_produk/ban.jpg"
                         class="card-img-top" alt="Sparepart Standar" />
                     <div class="card-img-overlay">
                         <i class="fas fa-tire icon-overlay"></i>
@@ -208,7 +215,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="/foto_produk/kolter.jpg"
-                        class="card-img-top" alt="Kolter" />
+                        class="card-img-top-pelayanan" alt="Kolter" />
                     <div class="card-img-overlay">
                         <i class="fas fa-wrench icon-overlay"></i>
                     </div>
@@ -220,7 +227,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="https://planetban.com/media/wysiwyg/swatches/image_article/2211-a-servisberkala.jpg"
-                        class="card-img-top" alt="Service Motor" />
+                        class="card-img-top-pelayanan" alt="Service Motor" />
                     <div class="card-img-overlay">
                         <i class="fas fa-tools icon-overlay"></i>
                     </div>
@@ -232,7 +239,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="/foto_produk/tyrechanger2.jpg"
-                        class="card-img-top" alt="Tyre Changer" />
+                        class="card-img-top-pelayanan" alt="Tyre Changer" />
                     <div class="card-img-overlay">
                         <i class="fas fa-exchange-alt icon-overlay"></i>
                     </div>
@@ -244,7 +251,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="/foto_produk/bubut.jpg"
-                        class="card-img-top" alt="Teknik Bubut" />
+                        class="card-img-top-pelayanan" alt="Teknik Bubut" />
                     <div class="card-img-overlay">
                         <i class="fas fa-cogs icon-overlay"></i>
                     </div>
@@ -256,7 +263,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="https://imgx.gridoto.com/crop/0x0:0x0/700x500/photo/2023/08/29/las-rangkajpg-20230829010606.jpg"
-                        class="card-img-top" alt="Las" />
+                        class="card-img-top-pelayanan" alt="Las" />
                     <div class="card-img-overlay">
                         <i class="fas fa-welding-torch icon-overlay"></i>
                     </div>
@@ -268,7 +275,7 @@
             <div class="col-md-4 col-sm-6 promo-card">
                 <div class="card">
                     <img src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2020/12/07/3229237043.jpg"
-                        class="card-img-top" alt="Turun Mesin" />
+                        class="card-img-top-pelayanan" alt="Turun Mesin" />
                     <div class="card-img-overlay">
                         <i class="fas fa-engine icon-overlay"></i>
                     </div>
