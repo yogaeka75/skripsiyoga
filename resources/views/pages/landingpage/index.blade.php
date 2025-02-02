@@ -165,7 +165,7 @@
             </div>
             <div class="col-md-2 col-sm-4 category-card">
                 <div class="card">
-                    <img src="/foto_produk/tomok.jpeg"
+                    <img src="/foto_produk/tomok.jpg"
                         class="card-img-top" alt="Sparepart Standar" />
                     <div class="card-img-overlay">
                         <i class="fas fa-wrench icon-overlay"></i>
