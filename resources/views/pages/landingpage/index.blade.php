@@ -110,7 +110,7 @@
                         style="height: 400px; object-fit: cover" class="d-block w-100" alt="Slide 2" />
                 </div>
                 <div class="carousel-item">
-                    <img src="/foto_produk/toko1.jpeg"
+                    <img src="/foto_produk/sparepart.jpg"
                         style="height: 400px; object-fit: cover" class="d-block w-100" alt="Slide 3" />
                 </div>
             </div>
@@ -141,7 +141,7 @@
             </div>
             <div class="col-md-2 col-sm-4 category-card">
                 <div class="card">
-                    <img src="/foto_produk/5.jpeg"
+                    <img src="/foto_produk/velg.jpg"
                         class="card-img-top" alt="Sparepart Standar" />
                     <div class="card-img-overlay">
                         <i class="fas fa-cogs icon-overlay"></i>
@@ -165,7 +165,7 @@
             </div>
             <div class="col-md-2 col-sm-4 category-card">
                 <div class="card">
-                    <img src="/foto_produk/3.jpeg"
+                    <img src="/foto_produk/tomok.jpeg"
                         class="card-img-top" alt="Sparepart Standar" />
                     <div class="card-img-overlay">
                         <i class="fas fa-wrench icon-overlay"></i>
@@ -177,7 +177,7 @@
             </div>
             <div class="col-md-2 col-sm-4 category-card">
                 <div class="card">
-                    <img src="/foto_produk/4.jpg"
+                    <img src="/foto_produk/motul.jpg"
                         class="card-img-top" alt="Sparepart Standar" />
                     <div class="card-img-overlay">
                         <i class="fas fa-oil-can icon-overlay"></i>
